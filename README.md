@@ -70,19 +70,25 @@ Note: GUI mode in Docker requires additional setup and may not work on all syste
 
 ### Building the Executable
 
-To create an executable file for distribution, you can use the provided build scripts:
+To create an executable file for distribution, you can use the provided build scripts. The build process uses a virtual environment for isolation.
 
-- For Unix-based systems, run:
+1. Set up the virtual environment (if not already done):
+   ```
+   python -m venv .venv
+   .venv\Scripts\activate  # On Windows
+   pip install pyinstaller
+   ```
 
-  ```
-  ./build.sh
-  ```
+2. Run the build script:
+   - For Unix-based systems, run:
+     ```
+     ./build.sh
+     ```
 
-- For Windows, run:
-
-  ```
-  build.bat
-  ```
+   - For Windows, run:
+     ```
+     build.bat
+     ```
 
 This will generate an executable that you can share with your colleagues.
 
